@@ -15,7 +15,7 @@ h1 + p {
   margin-top: .5em;
   margin-bottom: 2.65em;
   padding-bottom: 1.325em;
-  border-bottom: 1px dotted;
+  /* border-bottom: 1px dotted; */
 }
 ul {
   padding-left: 0;

@@ -8,10 +8,13 @@
 </head>
 <body>
     <h1 id="myHeading">Javascript and the DOM</h1> 
-    <p>Making a web page interactive</p>
     <input type="text" id="myTextInput" value='Type a color...' onclick="this.value=''" onBlur="if(this.value=='') {this.value = 'Type a color...'}" /> 
     <button id="myButton">Change Headline Color</button>
     <button id="reset">Reset</button>
+
+    <p>Making a web page interactive</p>
+    <input type="text" id="labelInput" value="Change sentence..." onclick="this.value=''" onblur="if(this.value=='') {this.value='Change sentence...'}"/>
+   
     <script src="script.js"></script>
 </body>
 </html>
