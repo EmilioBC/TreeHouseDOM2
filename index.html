@@ -8,11 +8,11 @@
 </head>
 <body>
     <h1 id="myHeading">Javascript and the DOM</h1> 
-    <input type="text" id="myTextInput" value='Type a color...' onclick="this.value=''" onBlur="if(this.value=='') {this.value = 'Type a color...'}" /> 
-    <button id="myButton">Change Headline Color</button>
+    <input type="text" id="inputChangeColor" value='Type a color...' onclick="this.value=''" onBlur="if(this.value=='') {this.value = 'Type a color...'}" /> 
+    <button id="buttonChangeColor">Change Headline Color</button>
     <button id="reset">Reset</button>
 
-    <p>Making a web page interactive</p>
+    <p class="description">Making a web page interactive</p>
     <input type="text" id="labelInput" value="Change sentence..." onclick="this.value=''" onblur="if(this.value=='') {this.value='Change sentence...'}"/>
 
     <p title="label">Things that are purple:</p>
@@ -26,6 +26,11 @@
         <li class="error-not-purple">Ball</li>
         <li>Plums</li>
     </ul>
+
+<!-- <input type="text" id="inputNew" value="Type Item..." onclick="this.value=''" onblur="if(this.value=='') {this.value='Type Item...'}" > -->
+<input type="text" id="inputNew" value="Type New Item..." onclick="this.value=''" onblur="if(this.value=='') {this.value='Type New Item...'}">
+<button id="buttonNew">Add</button>
+<button id="buttonRemove">Remove Last Item</button>
    
     <script src="script.js"></script>
 </body>

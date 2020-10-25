@@ -1,14 +1,19 @@
 const myHeading = document.getElementById('myHeading');
-const myButton = document.getElementById('myButton');
+const buttonChangeColor = document.getElementById('buttonChangeColor');
 const resetButton = document.getElementById('reset');
-const myTextInput = document.getElementById('myTextInput');
+const inputChangeColor = document.getElementById('inputChangeColor');
 const labelInput = document.getElementById('labelInput');
 const myP = document.getElementsByTagName('p');
+const p = document.querySelector('p.description');
+const inputNew = document.getElementById('inputNew');
+const buttonNew = document.querySelector('button#buttonNew');
+const buttonRemove = document.getElementById('buttonRemove');
 
 
-myButton.addEventListener('click', () => {
-    myHeading.style.color = myTextInput.value;
-    myHeading.textContent = myTextInput.value;
+buttonChangeColor.addEventListener('click', () => {
+    myHeading.style.color = inputChangeColor.value;
+    myHeading.textContent = inputChangeColor.value;
+    inputChangeColor.value = 'Type a color...';
 });
 
 resetButton.addEventListener('click', () => {
@@ -37,3 +42,17 @@ const evens = document.querySelectorAll('li:nth-child(odd)');
 for(let i = 0; i <evens.length; i++) {
     evens[i].style.color = 'lightgray';
 }
+
+buttonNew.addEventListener('click', () => {
+    let ul = document.getElementsByTagName('ul')[0];
+    let li = document.createElement('li');
+    li.textContent = inputNew.value;
+    ul.appendChild(li);
+    inputNew.value = 'Type New Item';
+});
+
+buttonRemove.addEventListener('click', () => {
+    let ul = document.getElementsByTagName('ul')[0];
+    let li = document.querySelector('li:last-child');
+    ul.removeChild(li);
+});
