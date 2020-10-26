@@ -14,7 +14,7 @@
 
     <p class="description">Making a web page interactive</p>
     <input type="text" id="labelInput" value="Change sentence..." onclick="this.value=''" onblur="if(this.value=='') {this.value='Change sentence...'}"/>
-
+    <div id="list">
     <p title="label">Things that are purple:</p>
     <ul>
         <li>Grapes</li>
@@ -28,10 +28,11 @@
     </ul>
 
 <!-- <input type="text" id="inputNew" value="Type Item..." onclick="this.value=''" onblur="if(this.value=='') {this.value='Type Item...'}" > -->
-<input type="text" id="inputNew" value="Type New Item..." onclick="this.value=''" onblur="if(this.value=='') {this.value='Type New Item...'}">
+<input type="text" id="inputNew" value="Type New Item" onclick="this.value=''" onblur="if(this.value=='') {this.value='Type New Text'}">
+
 <button id="buttonNew">Add</button>
 <button id="buttonRemove">Remove Last Item</button>
-   
+</div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -8,7 +8,25 @@ const p = document.querySelector('p.description');
 const inputNew = document.getElementById('inputNew');
 const buttonNew = document.querySelector('button#buttonNew');
 const buttonRemove = document.getElementById('buttonRemove');
+const listDiv = document.getElementById('list');
 
+
+listDiv.addEventListener('mouseover', (event) => {
+    if (event.target.tagName == 'LI') {
+    event.target.textContent = event.target.textContent.toUpperCase();
+}
+});
+
+listDiv.addEventListener('mouseout', (event) => {
+    if (event.target.tagName == 'LI') {
+    event.target.textContent = event.target.textContent.toLowerCase();
+}
+});
+
+///////////////// USEFUL FOR CHECKING TARGET EVENTS //////////////////
+// document.addEventListener('click', (event) => {
+//     console.log(event.target);
+// });
 
 buttonChangeColor.addEventListener('click', () => {
     myHeading.style.color = inputChangeColor.value;
@@ -22,7 +40,7 @@ resetButton.addEventListener('click', () => {
 });
 
 labelInput.addEventListener('keypress', (e) => {
-    if(e.code == 'Enter') {
+    if(e.code ==  'Enter') {
         myP.textContent = labelInput.value;
     }
 });
@@ -43,16 +61,57 @@ for(let i = 0; i <evens.length; i++) {
     evens[i].style.color = 'lightgray';
 }
 
+// buttonNew.addEventListener('click', () => {
+//     let ul = document.getElementsByTagName('ul')[0];
+//     let li = document.createElement('li');
+//     li.textContent = inputNew.value;
+//     ul.appendChild(li);
+//     inputNew.value = 'Type New Item';
+// });
+
+// buttonRemove.addEventListener('click', () => {
+//     let ul = document.getElementsByTagName('ul')[0];
+//     let li = document.querySelector('li:last-child');
+//     ul.removeChild(li);
+// });
+
 buttonNew.addEventListener('click', () => {
     let ul = document.getElementsByTagName('ul')[0];
     let li = document.createElement('li');
     li.textContent = inputNew.value;
     ul.appendChild(li);
-    inputNew.value = 'Type New Item';
-});
+    inputNew.value = 'Type New Item...'
+})
 
 buttonRemove.addEventListener('click', () => {
     let ul = document.getElementsByTagName('ul')[0];
-    let li = document.querySelector('li:last-child');
+    let li = document.querySelector('li:last-child')
     ul.removeChild(li);
-});
+})
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////// TEMP JS FUNCTION IN FUNCTION ///////////////////////////////////////////////////////////////////////////////////////
+
+// function exec(func,arg) {
+//     func(arg);
+// }
+
+// exec((something) => {
+//     console.log(something);
+// }, 'Greetings, everyone!');
+
+
+window.setTimeout((something) => {
+    console.log(something);
+}, 3000, 'Greetings, everyone!');
+
+
+function add(num1, num2) {
+    console.log(num1+num2);
+}
+
+window.setTimeout(add,5000,2,2);
